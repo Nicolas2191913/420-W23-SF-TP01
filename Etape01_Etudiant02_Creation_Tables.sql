@@ -22,18 +22,29 @@ CREATE TABLE logiciel (
 	id_logiciel INT,
     nom_logiciel VARCHAR(45),
     nb_license INT,
-    
-
-
-
+    id_editeur INT
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
-CREATE TABLE espece (
-  id smallint(6) unsigned NOT NULL AUTO_INCREMENT,
-  nom_courant varchar(40) NOT NULL,
-  nom_latin varchar(40) NOT NULL,
-  description text,
-  prix decimal(7,2) unsigned DEFAULT NULL,
-  PRIMARY KEY (id),
-  UNIQUE KEY nom_latin (nom_latin)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+CREATE TABLE editeur (
+	id_editeur INT,
+    nom_lediteur VARCHAR(45)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+CREATE TABLE poste_has_logiciel (
+	id_poste INT,
+    id_logiciel INT
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+CREATE TABLE usager (
+	id_usager INT,
+    nom_usager VARCHAR(45),
+    prenom_usager VARCHAR(45),
+    telephone_usager VARCHAR(15)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+CREATE TABLE usager_has_poste (
+	id_usager INT,
+    id_poste INT
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+
