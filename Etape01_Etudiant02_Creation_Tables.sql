@@ -5,8 +5,8 @@
  
  Date  02-07-2021                                             
 */
- DROP DATABASE IF EXISTS PosteClientDFC;
- CREATE DATABASE IF NOT EXISTS PosteClientDFC;
+ -- DROP DATABASE IF EXISTS PosteClientDFC;
+ -- CREATE DATABASE IF NOT EXISTS PosteClientDFC;
 
 USE PosteClientDFC;
 -- -----------------------------------------------------
@@ -46,5 +46,4 @@ CREATE TABLE usager_has_poste (
 	id_usager INT,
     id_poste INT
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
-
 
