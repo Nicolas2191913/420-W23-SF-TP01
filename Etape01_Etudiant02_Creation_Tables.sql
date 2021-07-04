@@ -27,7 +27,7 @@ CREATE TABLE logiciel (
 DROP TABLE IF EXISTS editeur;
 CREATE TABLE editeur (
 	id_editeur INT UNSIGNED PRIMARY KEY,
-    nom_lediteur VARCHAR(45)
+    nom_editeur VARCHAR(45)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 DROP TABLE IF EXISTS poste_has_logiciel;
@@ -42,10 +42,10 @@ CREATE TABLE usager (
     nom_usager VARCHAR(45),
     prenom_usager VARCHAR(45),
     telephone_usager VARCHAR(15),
-    local_id_local INT,
-    FOREIGN KEY(local_id_local)
+    local_id_local INT UNSIGNED,
+   FOREIGN KEY (local_id_local)
 		REFERENCES `local` (id_local)
-) ENGINE = InnoDB DEFAULT CHARSET = latin1;;
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 DROP TABLE IF EXISTS usager_has_poste;
 CREATE TABLE usager_has_poste (

@@ -5,11 +5,12 @@
  
  Date  JJ-MM-AAAA                                             
 */
-
 USE PosteClientDFC;
 -- -----------------------------------------------------
 -- Étape 2 : Insertion des données                    --
 -- -----------------------------------------------------
+SET foreign_key_checks = 0;
+
 INSERT INTO logiciel (id_logiciel, nom_logiciel, nb_license , id_editeur )
 VALUES 
 (1,'Libre Office',100,6),
@@ -373,7 +374,7 @@ VALUES
 (171,22),
 (172,22);
 
-INSERT INTO usager (id_usager,nom_usager,prenom_usager,telephone_usager )
+INSERT INTO usager (id_usager,nom_usager,prenom_usager,telephone_usager, local_id_local )
 VALUES  (1,'Duchesneau','Jean-Pierre','1-418-656-6600',6),
 (2,'Berrier','Goerge','1-418-656-6600',6),
 (3,'Roy','Claude','1-418-656-0000',6),
@@ -549,3 +550,6 @@ VALUES
 (197,1097),
 (198,1098),
 (199,1099);
+
+
+SET foreign_key_checks = 1;
