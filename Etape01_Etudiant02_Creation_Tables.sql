@@ -12,38 +12,39 @@ USE PosteClientDFC;
 -- -----------------------------------------------------
 -- Étape 1 : Création des tables                      --
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS logiciel;
-DROP TABLE IF EXISTS editeur;
-DROP TABLE IF EXISTS poste_has_logiciel;
-DROP TABLE IF EXISTS usager;
-DROP TABLE IF EXISTS usager_has_poste;
+SET foreign_key_checks = 0;
 
+DROP TABLE IF EXISTS logiciel;
 CREATE TABLE logiciel (
-	id_logiciel INT,
+	id_logiciel INT UNSIGNED ,
     nom_logiciel VARCHAR(45),
-    nb_license INT,
-    id_editeur INT
+    nb_license INT UNSIGNED,
+    id_editeur INT UNSIGNED
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+DROP TABLE IF EXISTS editeur;
 CREATE TABLE editeur (
-	id_editeur INT,
+	id_editeur INT UNSIGNED,
     nom_lediteur VARCHAR(45)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+DROP TABLE IF EXISTS poste_has_logiciel;
 CREATE TABLE poste_has_logiciel (
-	id_poste INT,
-    id_logiciel INT
+	id_poste INT UNSIGNED,
+    id_logiciel INT UNSIGNED
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+DROP TABLE IF EXISTS usager;
 CREATE TABLE usager (
-	id_usager INT,
+	id_usager INT UNSIGNED,
     nom_usager VARCHAR(45),
     prenom_usager VARCHAR(45),
     telephone_usager VARCHAR(15)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+DROP TABLE IF EXISTS usager_has_poste;
 CREATE TABLE usager_has_poste (
-	id_usager INT,
-    id_poste INT
+	id_usager INT UNSIGNED,
+    id_poste INT UNSIGNED
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
