@@ -492,7 +492,7 @@ VALUES  (1,'Duchesneau','Jean-Pierre','1-418-656-6600',6),
 (1098,'Bean','Griffin','1-937-746-0989',4),
 (1099,'Holman','Tate','1-776-590-9971',4);
 
-INSERT INTO usager_has_poste (id_usager, id_poste)
+INSERT INTO usager_has_poste (id_poste, id_usager)
 VALUES 
 (1,1),
 (2,2),
