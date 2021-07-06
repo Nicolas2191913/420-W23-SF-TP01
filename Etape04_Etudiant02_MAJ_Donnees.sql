@@ -24,4 +24,21 @@ UPDATE `local`
 SET nom_local = 'p-418', nb_bureau = 27, nb_prise_ethernet = 27, imprimante_id_peripherique = 679
 WHERE id_local = 2;
 
+UPDATE peripherique
+SET id_type_peripherique= 4
+WHERE id_peripherique < 213;
+
+UPDATE peripherique
+SET id_type_peripherique= 1
+WHERE id_peripherique > 671;
+
+UPDATE peripherique
+SET id_type_peripherique= 3
+WHERE id_peripherique > 443 AND id_peripherique < 672;
+
+UPDATE peripherique
+SET id_type_peripherique= 2
+WHERE id_peripherique < 444 AND id_peripherique > 212;
+
+
 SET foreign_key_checks = 1;
