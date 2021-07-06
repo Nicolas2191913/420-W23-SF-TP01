@@ -13,8 +13,6 @@ USE PosteClientDFC;
 
 SET foreign_key_checks = 0;
 
-SELECT * FROM usager;
-
 UPDATE `local`
 SET nb_bureau = 16,
 	nb_prise_ethernet = 16,
@@ -32,5 +30,17 @@ SET nb_bureau = 27,
 	nb_prise_ethernet = 27,
     imprimante_id_peripherique = 677
 WHERE nom_local = 'P-309';
+
+UPDATE usager
+SET Id_typeUsager = 1
+WHERE id_usager <= 9;
+
+UPDATE usager
+SET Id_typeUsager = 2
+WHERE (id_usager > 99 AND id_usager < 1000);
+
+UPDATE usager
+SET Id_typeUsager = 3
+WHERE id_usager >= 1000;
 
 SET foreign_key_checks = 1;
