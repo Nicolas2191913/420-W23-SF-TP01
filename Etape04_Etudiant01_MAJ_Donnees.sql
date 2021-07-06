@@ -11,12 +11,10 @@ USE PosteClientDFC;
 -- Étape 4 : Mise à jour des données (Clause UPDATE)  --
 -- -----------------------------------------------------
 
-SET foreign_key_checks = 0;
-
 UPDATE `local`
-SET nb_bureau = 16,
-	nb_prise_ethernet = 16,
-    imprimante_id_peripherique = 674
+SET nb_bureau = 16
+,	nb_prise_ethernet = 16
+,    imprimante_id_peripherique = 674
 WHERE nom_local = 'P-210';
 
 UPDATE `local`
@@ -42,5 +40,3 @@ WHERE (id_usager > 99 AND id_usager < 1000);
 UPDATE usager
 SET Id_typeUsager = 3
 WHERE id_usager >= 1000;
-
-SET foreign_key_checks = 1;

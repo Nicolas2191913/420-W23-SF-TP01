@@ -34,7 +34,7 @@ ALTER TABLE `local`
 	ADD COLUMN imprimante_id_peripherique INT UNSIGNED,
 		MODIFY nom_local VARCHAR(45) NOT NULL,
 		ADD CONSTRAINT fkimprimante FOREIGN KEY (imprimante_id_peripherique)
-        REFERENCES peripherique (id_type_peripherique),
+        REFERENCES peripherique (id_peripherique),
 		ADD CONSTRAINT uk_nom_local UNIQUE (nom_local);
 
 ALTER TABLE fabricant

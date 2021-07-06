@@ -54,4 +54,4 @@ CREATE TABLE IF NOT EXISTS fabricant(
     nom_fabricant VARCHAR(45))
 ENGINE=InnoDB;
 
-
+SET foreign_key_checks = 1;

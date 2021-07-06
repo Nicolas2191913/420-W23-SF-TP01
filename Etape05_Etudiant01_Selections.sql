@@ -32,6 +32,3 @@ FROM logiciel AS l
     ON l.id_logiciel = p.id_logiciel
 	GROUP BY p.id_logiciel
     ORDER BY COUNT(p.id_poste) DESC;
-
-    
-    
