@@ -28,8 +28,24 @@ ALTER TABLE usager
 		ADD CONSTRAINT fk_Id_typeUsager FOREIGN KEY (Id_typeUsager)
 		REFERENCES typeusager (id_typeUsager);
         
-ALTER TABLE logiciel
-	MODIFY nom_logiciel VARCHAR(45) UNIQUE NOT NULL;
+
+-- Version ajout de Unique not Null comme Nico    
+ ALTER TABLE logiciel
+	 MODIFY nom_logiciel VARCHAR(45) NOT NULL,
+     ADD CONSTRAINT uk_nom_logiciel UNIQUE (nom_logiciel);
+	
+    ALTER TABLE editeur
+		MODIFY nom_editeur VARCHAR(45) NOT NULL,
+		ADD CONSTRAINT uk_nom_editeur UNIQUE (nom_editeur);
+        
+-- Version alternative       
+-- ALTER TABLE logiciel
+	-- MODIFY nom_logiciel VARCHAR(45) UNIQUE NOT NULL;
     
-ALTER TABLE editeur 
-	MODIFY nom_editeur VARCHAR(45) UNIQUE NOT NULL;
+-- ALTER TABLE editeur 
+	-- MODIFY nom_editeur VARCHAR(45) UNIQUE NOT NULL;
+    
+-- Test doublons
+  -- INSERT INTO logiciel (id_logiciel, nom_logiciel, nb_license , id_editeur )
+  -- VALUES 
+  -- (87,'libre Office',100,6);
