@@ -1,9 +1,9 @@
 /* 
  Travail pratique 1
- Nom de la première personne
- --> Nom de la deuxième personne
+ Nicolas Lavigne
+ --> Tristan Hamel
  
- Date  JJ-MM-AAAA                                             
+ Date  04-07-2021                                            
 */
 USE PosteClientDFC;
 -- -----------------------------------------------------
