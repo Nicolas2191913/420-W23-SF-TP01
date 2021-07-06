@@ -40,5 +40,4 @@ UPDATE peripherique
 SET id_type_peripherique= 2
 WHERE id_peripherique < 444 AND id_peripherique > 212;
 
-
 SET foreign_key_checks = 1;
